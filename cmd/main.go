@@ -1,24 +1,17 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/gin-gonic/gin"
 	"igaopk.com/goPower/internal/config"
+	"igaopk.com/goPower/internal/database"
+	"igaopk.com/goPower/internal/logger"
 )
 
 func main() {
+	logger.LogMessage("Starting the application...", logger.INFO)
 	config.LoadEnvs()
-
-	fmt.Println("Its works")
+	database.Connect()
 	router := gin.Default()
 
-	port := config.GetEnv("APP_PORT", "8080")
-
-	router.GET("/health", func(ctx *gin.Context) {
-		user := config.GetEnv("DB_USER", "Error")
-		ctx.JSON(200, gin.H{"status": "We are the power " + user})
-	})
-
-	router.Run(":" + port)
+	router.Run(":" + config.GetEnv("PORT", "8080"))
 }
