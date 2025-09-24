@@ -10,7 +10,7 @@ import (
 func LoadEnvs() {
 	err := godotenv.Load()
 	if err != nil {
-		log.Println("⚠️  .env file not found or failed to load (defaulting to system env)")
+		log.Println(".env file not found or failed to load (defaulting to system env)")
 	}
 }
 
