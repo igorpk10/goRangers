@@ -5,13 +5,22 @@ import (
 	"igaopk.com/goPower/internal/config"
 	"igaopk.com/goPower/internal/database"
 	"igaopk.com/goPower/internal/logger"
+	"igaopk.com/goPower/internal/routes.go"
 )
 
 func main() {
-	logger.LogMessage("Starting the application...", logger.INFO)
 	config.LoadEnvs()
-	database.Connect()
-	router := gin.Default()
+	logger.LogMessage("Starting the application...", logger.INFO)
+	logger.LogMessage("Environment variables loaded.", logger.INFO)
 
-	router.Run(":" + config.GetEnv("PORT", "8080"))
+	var db = config.GetEnv("DB_NAME")
+	logger.LogMessage("Connecting to the database %s ...", logger.INFO, db)
+
+	database.Connect()
+	logger.LogMessage("Database connected successfully.", logger.INFO)
+
+	router := gin.Default()
+	routes.SetupRoutes(router)
+
+	router.Run(":" + config.GetEnv("APP_PORT"))
 }

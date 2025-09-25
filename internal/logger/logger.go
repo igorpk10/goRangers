@@ -1,15 +1,21 @@
 package logger
 
-import "igaopk.com/goPower/internal/config"
+import (
+	"fmt"
+	"strings"
 
-func LogMessage(message string, level string) {
-	isDebug := config.GetEnv("DEBUG_MODE", "false")
+	"igaopk.com/goPower/internal/config"
+)
+
+func LogMessage(message string, level string, args ...interface{}) {
+	isDebug := config.GetEnv("DEBUG_MODE")
 
 	if !validateLevel(level) {
 		panic("Invalid log level: " + level)
 	}
 
 	if isDebug == "true" {
-		println(level, message)
+		formatted := fmt.Sprintf(message, args...)
+		fmt.Printf("[%s] %s\n", strings.ToUpper(level), formatted)
 	}
 }

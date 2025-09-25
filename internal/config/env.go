@@ -8,15 +8,16 @@ import (
 )
 
 func LoadEnvs() {
-	err := godotenv.Load()
+	err := godotenv.Load("../.env") // sobe uma pasta e busca o .env
 	if err != nil {
 		log.Println(".env file not found or failed to load (defaulting to system env)")
 	}
 }
 
-func GetEnv(key string, defaultValue string) string {
+func GetEnv(key string) string {
 	if value, exists := os.LookupEnv(key); exists {
 		return value
 	}
-	return defaultValue
+
+	panic("Environment variable " + key + " not set")
 }
