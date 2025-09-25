@@ -5,7 +5,7 @@ CREATE TABLE ranger (
     color VARCHAR(50),
     role VARCHAR(100),
     team VARCHAR(100),
-    season VARCHAR(100),
+    season INT,
     zord VARCHAR(100),
     weapon VARCHAR(100),
     morpher VARCHAR(100),

@@ -11,14 +11,14 @@ type Ranger struct {
 	Color           string     `gorm:"type:varchar(50)"`
 	Role            string     `gorm:"type:varchar(100)"`
 	Team            string     `gorm:"type:varchar(100)"`
-	Season          string     `gorm:"type:varchar(100)"`
+	Season          int        `gorm:"type:varchar(100)"`
 	Zord            string     `gorm:"type:varchar(100)"`
 	Weapon          string     `gorm:"type:varchar(100)"`
 	Morpher         string     `gorm:"type:varchar(100)"`
 	ActorName       string     `gorm:"type:varchar(100)"`
 	PlanetOrigin    string     `gorm:"type:varchar(100)"`
-	FirstAppearance *time.Time `gorm:"type:date"` // ponteiro para suportar NULL
-	Age             *int       `gorm:"type:int"`  // ponteiro para suportar NULL
+	FirstAppearance *time.Time `gorm:"type:date"` 
+	Age             *int       `gorm:"type:int"`  
 	IsLeader        bool       `gorm:"default:false"`
 	Status          string     `gorm:"type:varchar(50);default:'Ativo'"`
 	Bio             string     `gorm:"type:text"`

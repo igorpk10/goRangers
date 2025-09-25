@@ -8,36 +8,35 @@ INSERT INTO ranger (
 )
 VALUES
 -- Jason Lee Scott - Red Ranger
-('Jason Lee Scott', 'Red Ranger', 'Red', 'Leader', 'Mighty Morphin Power Rangers', 'Season 1',
+('Jason Lee Scott', 'Red Ranger', 'Red', 'Leader', 'Mighty Morphin Power Rangers', 1,
  'Tyrannosaurus Dinozord', 'Power Sword', 'Dino Morpher', 'Austin St. John', 'Earth',
  '1993-08-28', 18, TRUE, 'Ativo', 'Jason é o líder dos Power Rangers originais e mestre em artes marciais.'),
 
 -- Zack Taylor - Black Ranger
-('Zack Taylor', 'Black Ranger', 'Black', 'Dance Fighter', 'Mighty Morphin Power Rangers', 'Season 1',
+('Zack Taylor', 'Black Ranger', 'Black', 'Dance Fighter', 'Mighty Morphin Power Rangers', 1,
  'Mastodon Dinozord', 'Power Axe', 'Dino Morpher', 'Walter Emanuel Jones', 'Earth',
  '1993-08-28', 18, FALSE, 'Ativo', 'Zack é o divertido e energético Ranger preto, especialista em danças de combate.'),
 
 -- Kimberly Ann Hart - Pink Ranger
-('Kimberly Ann Hart', 'Pink Ranger', 'Pink', 'Gymnast', 'Mighty Morphin Power Rangers', 'Season 1',
+('Kimberly Ann Hart', 'Pink Ranger', 'Pink', 'Gymnast', 'Mighty Morphin Power Rangers', 1,
  'Pterodactyl Dinozord', 'Power Bow', 'Dino Morpher', 'Amy Jo Johnson', 'Earth',
  '1993-08-28', 18, FALSE, 'Ativo', 'Kimberly é uma ginasta talentosa e a primeira Ranger rosa.'),
 
 -- Trini Kwan - Yellow Ranger
-('Trini Kwan', 'Yellow Ranger', 'Yellow', 'Martial Artist', 'Mighty Morphin Power Rangers', 'Season 1',
+('Trini Kwan', 'Yellow Ranger', 'Yellow', 'Martial Artist', 'Mighty Morphin Power Rangers', 1,
  'Saber-Toothed Tiger Dinozord', 'Power Daggers', 'Dino Morpher', 'Thuy Trang', 'Earth',
  '1993-08-28', 18, FALSE, 'Ativo', 'Trini é inteligente, calma e possui grande domínio das artes marciais.'),
 
 -- Billy Cranston - Blue Ranger
-('Billy Cranston', 'Blue Ranger', 'Blue', 'Tech Expert', 'Mighty Morphin Power Rangers', 'Season 1',
+('Billy Cranston', 'Blue Ranger', 'Blue', 'Tech Expert', 'Mighty Morphin Power Rangers', 1,
  'Triceratops Dinozord', 'Power Lance', 'Dino Morpher', 'David Yost', 'Earth',
  '1993-08-28', 18, FALSE, 'Ativo', 'Billy é o gênio do grupo, responsável por muitas das invenções técnicas.'),
 
 -- Tommy Oliver - Green Ranger
-('Tommy Oliver', 'Green Ranger', 'Green', 'Lone Warrior', 'Mighty Morphin Power Rangers', 'Season 1',
+('Tommy Oliver', 'Green Ranger', 'Green', 'Lone Warrior', 'Mighty Morphin Power Rangers', 1,
  'Dragonzord', 'Dragon Dagger', 'Dragon Morpher', 'Jason David Frank', 'Earth',
  '1993-10-05', 18, FALSE, 'Ativo', 'Tommy começou como inimigo dos Rangers, mas depois se tornou um dos membros mais poderosos.')
 ;
-
 
 -- 🖼️ Pictures
 
