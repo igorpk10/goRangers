@@ -6,6 +6,9 @@ type Picture struct {
 	URL         string `gorm:"type:varchar(255);not null"`
 	Description string `gorm:"type:text"`
 
-	// Relacionamento inverso (opcional)
-	Ranger Ranger `gorm:"foreignKey:RangerID"`
+	Ranger Ranger `gorm:"foreignKey:RangerID" json:"-"`
+}
+
+func (Picture) TableName() string {
+	return "picture"
 }

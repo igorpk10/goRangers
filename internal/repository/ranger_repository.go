@@ -22,4 +22,3 @@ func (r *rangerGormRepository) FindAll() ([]models.Ranger, error) {
 	err := r.db.Preload("Pictures").Find(&rangers).Error
 	return rangers, err
 }
-

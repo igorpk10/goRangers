@@ -5,7 +5,7 @@ import (
 	"igaopk.com/goPower/internal/config"
 	"igaopk.com/goPower/internal/database"
 	"igaopk.com/goPower/internal/logger"
-	"igaopk.com/goPower/internal/routes.go"
+	"igaopk.com/goPower/internal/routes"
 )
 
 func main() {

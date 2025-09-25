@@ -26,3 +26,7 @@ type Ranger struct {
 	// Relacionamento 1:N com Picture
 	Pictures []Picture `gorm:"foreignKey:RangerID;constraint:OnDelete:CASCADE"`
 }
+
+func (Ranger) TableName() string {
+	return "ranger"
+}
